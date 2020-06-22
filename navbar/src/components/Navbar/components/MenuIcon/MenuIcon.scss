@@ -1,0 +1,29 @@
+@import '../../../../sass/variables.scss';
+@import '../../../../sass/mixins.scss';
+
+.menu__hamburger--icon {
+    border-style: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.menu__close--icon {
+    border-style: none;
+    font-size: pxToRem(25);
+    &:focus {
+        outline: none;
+    }
+}
+
+.hamburger__icon--item {
+  width: pxToRem(24);
+  height: pxToRem(2);
+  margin: pxToRem(6) 0;
+  background-color: $color-black-dark;
+}
+
+.menu__icon {
+    display: flex;
+    justify-content: flex-end;
+}

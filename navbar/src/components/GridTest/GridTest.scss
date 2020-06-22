@@ -1,0 +1,41 @@
+@import '../../sass/grid.scss';
+
+.g-c {
+  height: 112px; 
+}
+
+/*
+const mobileNav = (
+        <>
+        <div className=" grid-row mobile__row">
+            <div className="logo col-sm-1">
+                {LogoText}
+            </div>
+            <div className="menu__icon col-sm-1 col-sm-shift-2">
+            {isMenuOpen
+                ? (
+                <button
+                    onClick={toggleMenu}
+                >
+                    <div>
+                    Close
+                    </div>
+                </button>
+                ) : (
+                <button
+                    onClick={toggleMenu}
+                    className="menu__hamburger--icon"
+                >
+                    <div className="hamburger__icon--item" />
+                    <div className="hamburger__icon--item" />
+                    <div className="hamburger__icon--item" />
+                </button>
+                )}
+            </div>
+		</div>
+        {isMenuOpen && (
+          smallDeviceMenu
+        )}
+        </>
+    )
+*/

@@ -1,26 +1,100 @@
-.Header {
-    height:80px;
-    padding:10px;
-    background-color: cadetblue;
-    color:#fff;
-    font-weight:800;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+// @import '../../sass/bootgrid/bootgrid.scss';
+@import '../../sass/grid.scss';
+@import '../../sass/variables.scss';
+
+.navbar__container {
+    background-color: $color-white-light;
 }
 
-.logoWithHeading {
-    display: flex;
-    align-items: center;
-}
+.link {
+    padding: 10px;
+    text-decoration: none;
+    color:#1C1C1C;
+    font-size: pxToRem(14);
 
-.logo {
-    height: 9vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .logo {
-        animation: App-logo-spin infinite 20s linear;
+    &:hover {
+        border-bottom: 2px solid red;
+        padding-bottom: 24px;
     }
+}
+
+.grid-row {
+    height:70px;
+    align-items: center;
+}
+
+.desktop__row {
+  display: none;
+  @media (min-width: $grid-tablet-breakpoint) {
+      display: flex;
+  }
+}
+
+.tablet__mobile__row {
+    display: none;
+    @media (max-width: $grid-tablet-breakpoint) {
+        display: flex;
+    }
+}
+
+.mobile__row {
+    display: flex;
+    @media (min-width: $grid-mobile-breakpoint) {
+        display: none;
+    }
+}
+
+.btn__progress--main {
+    margin-right: pxToRem(20);
+    border-radius: 50%;
+    padding: 7px;
+    border: 2px solid grey;
+    background-color: lightgreen;
+}
+
+.btn__schedule--main {
+    padding: pxToRem(10);
+}
+
+// mobile menu classes
+
+.nav__menu--small {
+  display: none;
+  @media (max-width: $grid-tablet-breakpoint) {
+    display: flex;
+  }
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: $color-black-dark;
+  background: $color-white-light;
+  flex: 1 1 auto;
+  z-index: 1000;
+}
+
+.actions__md {
+    display: none;
+    @media (max-width: $grid-tablet-breakpoint) and (min-width: $grid-mobile-breakpoint) {
+        display: block;
+    }
+}
+
+.menu__row {
+  height: pxToRem(60);
+  align-items: center;
+}
+
+.menu__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 0 pxToRem(18) 0 pxToRem(18);
+  color: $color-black-dark;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+    color: $color-black-dark;
+  }
 }
